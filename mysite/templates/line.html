@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Лента</title>
+</head>
+<body>
+{% if user.is_authenticated %}
+  Приветствуем, {{ user.username }}!
+  <form action="http://127.0.0.1:8000/reg/logout">
+    <button> Выйти </button>
+  </form>
+{% else %}
+  <p></p>
+  <form action="http://127.0.0.1:8000/reg/signup">
+    <button> Войти или зарегистрироваться </button>
+  </form>
+{% endif %}
+<h4>Здесь фотографии и тд</h4>
+</body>
+</html>
